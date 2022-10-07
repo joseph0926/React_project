@@ -2,10 +2,10 @@
 
 ## 환경
 OS: window10 <br>
-DB: x
-언어: JavaScript
-프레임워크: React
-IDE: vsCode
+DB: x <br>
+언어: JavaScript <br>
+프레임워크: React <br>
+IDE: vsCode <br>
 일정: 2022.10.07 ~
 
 ## 개발 과정
