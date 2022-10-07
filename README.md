@@ -1,7 +1,7 @@
 # Portfolio_project
 
 ## 환경
-OS: window10
+OS: window10 <br>
 DB: x
 언어: JavaScript
 프레임워크: React
