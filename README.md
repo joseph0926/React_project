@@ -1,4 +1,6 @@
-# Portfolio_project
+# React_project
+
+# 1 - Portfolio
 
 ## 환경
 OS: window10 <br>
