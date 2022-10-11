@@ -1,10 +1,16 @@
-import React from 'react'
-import Home from '../components/Home/Home'
+import React, { Fragment } from "react";
+import Home from "../components/Home/Home";
+import About from "../components/About/About";
+import Service from "../components/Service/Service";
 
 const HomePage = () => {
   return (
-    <Home></Home>
-  )
-}
+    <Fragment>
+      <Home></Home>
+      <About></About>
+      <Service></Service>
+    </Fragment>
+  );
+};
 
-export default HomePage
+export default HomePage;

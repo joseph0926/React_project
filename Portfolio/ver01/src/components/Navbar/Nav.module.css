@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  background: rgba(114, 114, 114, 0.3);
+  width: max-content;
+  display: flex;
+  padding: .7rem 1.7rem;
+  z-index: 2;
+  position: fixed;
+  bottom: 2rem;
+  gap: 1rem;
+  border-radius: 3rem;
+  backdrop-filter: blur(15px);
+}
+
+nav a {
+  transform: rotateZ(-10deg);
+  background: transparent;
+  border-radius: 50%;
+  display: flex;
+  padding: .2rem .7rem;
+  font-size: 1.8rem;
+  color: red;
+}
+
+nav a:hover {
+  background: rgba(189, 189, 189, 0.3)
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  transform: rotateZ(-10deg);
+  background: transparent;
+  border-radius: 50%;
+  display: flex;
+  padding: .2rem .7rem;
+  font-size: 1.8rem;
+  color: red;
+}
+
+.nav a:hover {
+  background: rgba(189, 189, 189, 0.3)
+}
