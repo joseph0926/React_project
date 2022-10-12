@@ -12,7 +12,7 @@ const Home = () => {
         <h5 className={styles["text-light"]}>BackEnd + FrontEnd</h5>
         <div className={styles["link-container"]}>
           <Link to="/contact" className={styles.btn}>Contact</Link>
-          <a href="#about" className={styles.btn}>About</a>
+          <Link to="/projects" className={styles.btn}>Projects</Link>
         </div>
         <div className={styles.logo}>
           <Logo></Logo>

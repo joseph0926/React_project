@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 5rem;
+  gap: 5rem;
 }
 
 .card {
@@ -163,4 +164,10 @@
   font-size: 1.3rem;
   font-weight: 700;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1024px)  {
+  .container {
+    margin-top: -10rem;
+  }
 }

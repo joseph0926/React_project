@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from "./About.module.css"
+import AboutSide from './AboutSide'
 
 import IMG from "../../assets/about.jpg"
 import { Link } from 'react-router-dom'
@@ -25,6 +26,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <AboutSide></AboutSide>
     </section>
   )
 }
