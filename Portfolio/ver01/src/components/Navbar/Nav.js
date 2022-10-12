@@ -42,7 +42,7 @@ const Nav = () => {
             <RiServiceLine></RiServiceLine>
           </Link>
         </div>}
-        <Link to="/project" onClick={linkHandler}>
+        <Link to="/projects" onClick={linkHandler}>
           <BiBook></BiBook>
         </Link>
         <Link to="/contact" onClick={linkHandler}>
