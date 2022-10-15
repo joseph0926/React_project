@@ -21,3 +21,9 @@ IDE: vsCode <br>
 
 2022.10.12
 -> about 컴포넌트 구성
+
+2022.10.13
+-> about 완료
+
+2022.10.15
+-> service(chart) 완료
