@@ -24,6 +24,10 @@ header {
   border: none;
   margin: 0 1.5rem;
   background-color: transparent;
+  transition: all .5s;
+}
+.btn:hover {
+  color: red;
 }
 .btn::before {
   content: "";
