@@ -1,4 +1,4 @@
-.container {
+.content {
   position: fixed;
   top: 0;
   left: 0;
@@ -145,4 +145,14 @@
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+.main-img {
+  opacity: 0;
+  position: absolute;
+  right: 10%;
+  top: 35%;
+  transform: translateY(-35%);
+  animation: ani05 1s linear forwards;
+  animation-delay: 4s;
 }

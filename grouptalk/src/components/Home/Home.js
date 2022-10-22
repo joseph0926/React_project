@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import styles from "./Home.module.css";
+import Img1 from "../../assets/chat.png";
 
 const Home = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.content}>
       <div className={styles.center}></div>
       <div className={styles.center}></div>
       <section className={styles.main}>
@@ -19,6 +20,7 @@ const Home = () => {
           </p>
           <a href="#">둘러보기..</a>
         </div>
+        <img src={Img1} className={styles["main-img"]}></img>
       </section>
     </div>
   );

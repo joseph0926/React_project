@@ -1,0 +1,32 @@
+.nav {
+  z-index: 200;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background: #212532;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.nav span {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translate(calc(12px * var(--x)), calc(12px * var(--y)));
+}
+
+.nav-active {
+  z-index: 200;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: #212532;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.nav-active span {
+  transform: translate(calc(60px * var(--x)), calc(60px * var(--y)));
+}
