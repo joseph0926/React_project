@@ -1,14 +1,17 @@
 import React, { Fragment } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
 
 const App = () => {
   return (
-    <Fragment>
-      <Home></Home>
+    <BrowserRouter>
       <Navbar></Navbar>
-    </Fragment>
+      <Routes>
+        <Route path="/" element={<Home></Home>}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 

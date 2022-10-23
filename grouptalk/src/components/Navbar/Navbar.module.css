@@ -1,4 +1,5 @@
 .nav {
+  position: fixed;
   z-index: 200;
   position: relative;
   width: 70px;
@@ -7,6 +8,11 @@
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.5s;
+  transition-delay: 0.8s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: ani01 4s linear forwards;
 }
 .nav span {
   position: absolute;
@@ -15,6 +21,11 @@
   background: #fff;
   border-radius: 50%;
   transform: translate(calc(12px * var(--x)), calc(12px * var(--y)));
+  transition: transform 0.5s, width 0.5s, height 0.5s, background 0.5s;
+  transition-delay: calc(0.1s * var(--i));
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-active {
@@ -26,7 +37,35 @@
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-55px);
 }
 .nav-active span {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #333849;
+  border-radius: 50%;
   transform: translate(calc(60px * var(--x)), calc(60px * var(--y)));
+  transition: transform 0.5s, width 0.5s, height 0.5s, background 0.5s;
+  transition-delay: calc(0.1s * var(--i));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.nav-active span:hover {
+  color: aqua;
+  filter: drop-shadow(0 0 2px aqua) drop-shadow(0 0 5px aqua) drop-shadow(0 0 15px aqua);
+}
+
+@keyframes ani01 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
