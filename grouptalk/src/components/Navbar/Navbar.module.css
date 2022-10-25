@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: ani01 4s linear forwards;
+  /* animation: ani01 4s linear forwards; */
 }
 .nav span {
   position: absolute;
