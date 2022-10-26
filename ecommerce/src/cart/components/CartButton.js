@@ -29,7 +29,7 @@ const CartButton = () => {
 };
 
 const Wrapper = styled.div`
-  display: grid;
+  display: none;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   width: 15rem;
@@ -75,6 +75,10 @@ const Wrapper = styled.div`
     svg {
       margin-left: 5px;
     }
+  }
+
+  @media (min-width: 992px) {
+    display: grid;
   }
 `;
 
