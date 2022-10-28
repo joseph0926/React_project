@@ -4,15 +4,21 @@ import "./index.css";
 import App from "./App";
 
 import { ProductsProvider } from "./context/products_context";
-import { FilterProvider } from "./context/filter_context";
+import { Filter02ContextProvider } from "./context/filter02_context";
+import { CartProvider } from "./context/cart-context";
+import { AuthContextProvider } from "./context/auth-context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <ProductsProvider>
-    <FilterProvider>
-      <App />
-    </FilterProvider>
-  </ProductsProvider>
+  <AuthContextProvider>
+    <ProductsProvider>
+      <Filter02ContextProvider>
+        <CartProvider>
+          <App />
+        </CartProvider>
+      </Filter02ContextProvider>
+    </ProductsProvider>
+  </AuthContextProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

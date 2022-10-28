@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import AuthContext from "../../context/auth-context";
 
 import { FaBars } from "react-icons/fa";
 import styled from "styled-components";
 import CartButton from "../../cart/components/CartButton";
 
 const Nav = () => {
+  const authCtx = useContext(AuthContext);
+  const { isLoggedIn } = authCtx;
+
   return (
     <Wrapper>
       <div className="center">
@@ -21,9 +25,11 @@ const Nav = () => {
           <li>
             <NavLink to="/player">Player</NavLink>
           </li>
-          <li>
-            <NavLink to="/about">MyPage</NavLink>
-          </li>
+          {isLoggedIn && (
+            <li>
+              <NavLink to="/about">MyPage</NavLink>
+            </li>
+          )}
           <li>
             <NavLink to="/setting">Setting</NavLink>
           </li>

@@ -1,94 +1,66 @@
-import React from "react";
-import { useFilterContext } from "../../context/filter_context";
-import { BsFillGridFill, BsList } from "react-icons/bs";
+import React, { useContext } from "react";
+import Filter02Context from "../../context/filter02_context";
+
 import styled from "styled-components";
+
 const Sort = () => {
-  const { filtered_products: products, grid_view, setGridView, setListView, sort, updateSort } = useFilterContext();
+  const filterCtx = useContext(Filter02Context);
+  const {
+    filters: { text },
+    updateFilters,
+  } = filterCtx;
+
   return (
     <Wrapper>
-      <div className="btn-container">
-        <button onClick={setGridView} className={`${grid_view ? "active" : null}`}>
-          <BsFillGridFill />
-        </button>
-        <button onClick={setListView} className={`${!grid_view ? "active" : null}`}>
-          <BsList />
-        </button>
-      </div>
-      <p>{products.length} products found</p>
-      <hr />
-      <form>
-        <label htmlFor="sort">sort by</label>
-        <select name="sort" id="sort" value={sort} onChange={updateSort} className="sort-input">
-          <option value="price-lowest">price (lowest)</option>
-          <option value="price-highest">price (highest)</option>
-          <option value="name-a">name (a - z)</option>
-          <option value="name-z">name (z - a)</option>
-        </select>
+      <form className="search-form" onSubmit={(e) => e.preventDefault()}>
+        <div className="search-container">
+          <input type="text" name="text" value={text} placeholder="선수를 검색해보세요" onChange={updateFilters} />
+        </div>
       </form>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
-  display: grid;
-  grid-template-columns: auto auto 1fr auto;
-  align-items: center;
-  margin-bottom: 2rem;
-  column-gap: 2rem;
-  @media (max-width: 576px) {
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 0.75rem;
-    .btn-container {
-      width: 50px;
-    }
-    label {
-      display: inline-block;
-      margin-right: 0.5rem;
-    }
+  width: 100vw;
+  margin-bottom: 3rem;
+  .search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1em 0;
   }
-  @media (min-width: 768px) {
-    column-gap: 2rem;
+  .search-container input {
+    border: none;
+    background-color: transparent;
+    width: 80%;
+    border-bottom: 2px solid var(--color-pri-alt);
+    padding: 1em 0.3em;
   }
-  p {
-    text-transform: capitalize;
-    margin-bottom: 0;
+  .search-container input:focus {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid red;
+    border-bottom-color: red;
   }
-
-  .btn-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 0.5rem;
-    button {
-      background: transparent;
-      border: 1px solid var(--clr-black);
-      color: var(--clr-black);
-      width: 1.5rem;
-      border-radius: var(--radius);
-      height: 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      svg {
-        font-size: 1rem;
-      }
-    }
-    .active {
-      background: var(--clr-black);
-      color: var(--clr-white);
-    }
+  .search-container button {
+    padding: 1em 2em;
+    margin-left: 1em;
+    background-color: darkslategray;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-top: 0.5em;
+    cursor: pointer;
   }
 
-  .sort-input {
-    border-color: transparent;
-    font-size: 1rem;
-    text-transform: capitalize;
-    padding: 0.25rem 0.5rem;
-  }
-  label {
-    font-size: 1rem;
-    text-transform: capitalize;
+  @media (min-width: 992px) {
+    width: 50vw;
+    .search-container {
+      display: block;
+    }
+    .search-container input {
+      width: 60%;
+    }
   }
 `;
 

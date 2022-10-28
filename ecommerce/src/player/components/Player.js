@@ -11,7 +11,7 @@ const Player = (props) => {
     <Wrapper>
       <div className="container">
         <img src={image}></img>
-        <Link to={`/products/${id}`} className="link">
+        <Link to={`/player/${id}`} className="link">
           <FaSearch></FaSearch>
         </Link>
       </div>

@@ -1,26 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { useCartContext } from "../../context/cart-context";
+import AuthContext from "../../context/auth-context";
 
 import { FaShoppingCart, FaUserMinus, FaUserPlus } from "react-icons/fa";
 import styled from "styled-components";
 
 const CartButton = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { total_items } = useCartContext();
+
+  const authCtx = useContext(AuthContext);
+  const { isLoggedIn, logout } = authCtx;
 
   return (
     <Wrapper>
-      <Link to="/cart" className="cart-btn">
-        Cart
-        <span className="container">
-          <FaShoppingCart></FaShoppingCart>
-          <span className="cart-value">5</span>
-        </span>
-      </Link>
-      <Link to="/auth" className="auth-btn">
-        Login <FaUserPlus></FaUserPlus>
-      </Link>
       {isLoggedIn && (
+        <Link to="/cart" className="cart-btn">
+          Cart
+          <span className="container">
+            <FaShoppingCart></FaShoppingCart>
+            <span className="cart-value">{total_items}</span>
+          </span>
+        </Link>
+      )}
+      {!isLoggedIn && (
         <Link to="/auth" className="auth-btn">
+          Login <FaUserPlus></FaUserPlus>
+        </Link>
+      )}
+      {isLoggedIn && (
+        <Link to="/auth" className="auth-btn" onClick={logout}>
           Logout <FaUserMinus></FaUserMinus>
         </Link>
       )}
