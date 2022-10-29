@@ -17,9 +17,9 @@ const Nav = () => {
           <Link to="/">
             <h1>Logo</h1>
           </Link>
-          <button type="button" className="toggle">
+          {/* <button type="button" className="toggle">
             <FaBars></FaBars>
-          </button>
+          </button> */}
         </div>
         <ul className="nav-list">
           <li>

@@ -7,11 +7,12 @@ import PlayerPage from "./player/pages/PlayerPage";
 import SinglePlayerPage from "./player/pages/SinglePlayerPage";
 import CartPage from "./cart/pages/CartPage";
 import Auth from "./user/pages/Auth";
+import NavHandler from "./shared/Nav/NavHandler";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Nav></Nav>
+      <NavHandler></NavHandler>
       <Routes>
         <Route path="/" element={<HomePage></HomePage>}></Route>
         <Route path="/player" element={<PlayerPage></PlayerPage>}></Route>
