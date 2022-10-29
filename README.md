@@ -27,3 +27,19 @@ IDE: vsCode <br>
 
 2022.10.15
 -> service(chart) 완료
+
+
+# 2 - ecommerce
+
+## 환경
+OS: window10 <br>
+DB: x <br>
+언어: JavaScript <br>
+프레임워크: React <br>
+IDE: vsCode <br>
+일정: 2022.10.27 ~
+
+## 개발 과정
+
+2022.10.29 <br>
+-> 
